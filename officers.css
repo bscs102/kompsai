@@ -73,7 +73,6 @@ body {
     color: var(--secondary-color); 
 }
 
-/* Intersection Observer / Reveal Styles */
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -226,4 +225,6 @@ body {
         height: 40px; 
     }
     .officer-card { margin-top: 0; }
+}r-card { margin-top: 0; }
+
 }
