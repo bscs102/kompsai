@@ -125,12 +125,12 @@ body {
     font-weight: 700;
     margin: 5px 0 0 0;
     color: var(--secondary-color);
-    font-family: 'Bungee Spice', sans-serif; /* Heading Font */
+    font-family: 'Bungee Spice', sans-serif;
 }
 
 .gallery-section {
     padding: 40px 0;
-    border-top: 2px solid var(--white); /* Simple separator */
+    border-top: 2px solid var(--white);
     text-align: center;
 }
 .gallery-section h3 {
