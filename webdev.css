@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #975f0c; 
+    --accent-color: #e08b0b; 
+    --secondary-color: #ffffff; 
+    --light-bg: #582b11; 
+    --white: #7a350d; 
+    --card-bg: #3D1203; 
+    --developer-bg: #4a2107; 
+    --gallery-bg: #3D1203;
+    --gallery-text: #ccc;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    color: var(--secondary-color);
+    background-color: var(--light-bg);
+}
+.sticky-header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: var(--white); 
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: var(--secondary-color);
+}
+.sticky-header h1 { 
+    color: var(--primary-color); 
+    font-family: 'Bungee Spice', sans-serif;
+}
+.sticky-header nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.sticky-header nav a:hover { color: var(--primary-color); }
+
+.developers-section {
+    padding-top: 100px; 
+    min-height: 100vh;
+    padding-bottom: 80px;
+    background-color: var(--light-bg); 
+    text-align: center;
+}
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.title {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    font-family: 'Bungee Spice', sans-serif; 
+}
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: var(--secondary-color); 
+}
+
+.dev-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 60px; 
+}
+
+.dev-card-link {
+    text-decoration: none; 
+}
+
+.dev-card {
+    background: var(--card-bg);
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgb(247, 214, 106);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%; 
+    color: var(--light-bg);
+}
+.dev-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(224, 139, 11, 0.5); 
+}
+
+.dev-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    margin: 0 auto 15px auto; 
+    display: block; 
+    background-size: cover; 
+    background-position: center;
+    background-color: var(--light-bg);
+}
+
+.dev-card .position {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.dev-card h3 {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin: 5px 0 0 0;
+    color: var(--secondary-color);
+    font-family: 'Bungee Spice', sans-serif; /* Heading Font */
+}
+
+.gallery-section {
+    padding: 40px 0;
+    border-top: 2px solid var(--white); /* Simple separator */
+    text-align: center;
+}
+.gallery-section h3 {
+    font-size: 2.2em;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    font-family: 'Bungee Spice', sans-serif;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.gallery-item {
+    background-color: var(--gallery-bg);
+    border: 1px solid #333;
+    padding: 15px;
+    text-align: center;
+}
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: var(--gallery-text);
+}
+.gallery-item-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-family: 'Bungee Spice', sans-serif;
+    overflow: hidden;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .dev-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+}
+@media (max-width: 500px) {
+    .sticky-header nav { display: none; }
+    .developers-section .title, .gallery-section h3 { font-size: 2em; }
+    .gallery-grid { grid-template-columns: 1fr; }
+}

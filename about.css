@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primary-color: #975f0c; 
+    --accent-color: #e08b0b; 
+    --secondary-color: #ffffff; 
+    --light-bg: #582b11; 
+    --white: #7a350d; 
+    --card-bg: #3D1203;
+}
+body {
+    font-family: 'Playfair Display', serif;
+    color: var(--secondary-color);
+    background-color: var(--light-bg);
+    min-height: 200vh; 
+}
+
+.sticky-header {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 50;
+    background-color: var(--white); padding: 15px 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+.sticky-header h1 { color: var(--primary-color); font-family: 'Bungee Spice', sans-serif; }
+.sticky-header nav a { color: var(--secondary-color); text-decoration: none; margin-left: 25px; font-weight: 500; transition: color 0.3s; }
+.sticky-header nav a:hover { color: var(--primary-color); }
+.container { width: 90%; max-width: 1200px; margin: 0 auto; padding-top: 20px; }
+.about-us-section { background-color: var(--light-bg); color: var(--secondary-color); padding: 100px 0 80px 0; text-align: center; }
+.about-us-section h2 { font-size: 2.5em; margin-bottom: 30px; border-bottom: 3px solid var(--primary-color); display: inline-block; padding-bottom: 5px; color: var(--accent-color); font-family: 'Bungee Spice', sans-serif; }
+.about-us-section h3 { font-size: 1.5em; margin: 40px 0 15px 0; color: var(--accent-color); text-align: center; }
+.cs-pillars { list-style: none; padding: 0; max-width: 800px; margin: 20px auto 40px auto; text-align: left; counter-reset: item; }
+.cs-pillars li { background-color: var(--card-bg); padding: 15px; margin-bottom: 10px; border-left: 3px solid var(--primary-color); }
+.cs-pillars li::before { counter-increment: item; content: counter(item) ". "; font-weight: bold; color: var(--accent-color); margin-right: 10px; }
+.about-us-section .info-line { font-size: 1.3em; font-weight: 700; margin-bottom: 20px; }
+.about-us-section .info-main { font-size: 1.1em; line-height: 1.7; max-width: 900px; margin: 0 auto 30px auto; text-align: justify; padding: 0 15px; }
+
+/* Scroll Reveal Styles */
+.reveal {
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out; 
+}
+
+.reveal.active {
+    opacity: 1; 
+    transform: scale(1) translateY(0);
+    transition-delay: 0s;
+}
+
+@media (max-width: 500px) {
+    .sticky-header nav { display: none; }
+    .about-us-section h2 { font-size: 2em; }
+    .about-us-section .info-line { font-size: 1.1em; }
+}
