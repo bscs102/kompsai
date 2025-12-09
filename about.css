@@ -37,7 +37,6 @@ body {
 .about-us-section .info-line { font-size: 1.3em; font-weight: 700; margin-bottom: 20px; }
 .about-us-section .info-main { font-size: 1.1em; line-height: 1.7; max-width: 900px; margin: 0 auto 30px auto; text-align: justify; padding: 0 15px; }
 
-/* Scroll Reveal Styles */
 .reveal {
     opacity: 0;
     transform: scale(0.95) translateY(30px);
