@@ -8,7 +8,7 @@
     --accent-color: #e08b0b; 
     --secondary-color: #ffffff; 
     --light-bg: #582b11; 
-    --white: #7a350d; /* Note: Naming this 'white' is confusing, but kept it as per original code */
+    --white: #7a350d;
     --card-bg: #3D1203;
 }
 body {
@@ -117,7 +117,6 @@ body {
     transform: scale(1) translateY(0);
     transition-delay: 0s; 
 }
-/* ------------------------------------- */
 
 .announcement-card:hover {
     border-left: 5px solid var(--accent-color);
